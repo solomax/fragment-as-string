@@ -43,9 +43,10 @@ public class CreatedAppointmentTemplate extends AbstractAppointmentTemplate {
 	public String getSubject() {
 		Fragment f = new Fragment(COMP_ID, "subject", this);
 		f.add(new Label("prefix", "Prefix").setRenderBodyOnly(true)
-				, new Label("title", "Title").setRenderBodyOnly(true)
-				, new Label("start", new Date().toString()).setRenderBodyOnly(true)
-				, new Label("end", new Date().toString()).setRenderBodyOnly(true)
+				, new TextLabel("title", "Title")
+				, new TextLabel("start", new Date().toString())
+				, new DashTextLabel("dash")
+				, new TextLabel("end", new Date().toString())
 				);
 		return ComponentRenderer.renderComponent(f).toString();
 	}
