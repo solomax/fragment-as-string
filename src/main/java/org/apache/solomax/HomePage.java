@@ -13,8 +13,7 @@ public class HomePage extends WebPage {
 		add(new Label("version", getApplication().getFrameworkSettings().getVersion()));
 
 		CreatedAppointmentTemplate temp = new CreatedAppointmentTemplate();
-		//add(new Label("subject", temp.getSubject()).setEscapeModelStrings(false));
-		add(new Label("subject", "Subject"));
 		add(new Label("body", temp.getEmail()).setEscapeModelStrings(false));
+		add(new Label("subject", temp.getSubject()).setEscapeModelStrings(false));
 	}
 }
